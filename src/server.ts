@@ -1,5 +1,5 @@
-import { initMcpServer } from "./Mcp/index.ts";
-import { logInfo } from "./Utils/logger.ts";
+import { initMcpServer } from "./Mcp/index.js";
+import { logInfo } from "./Utils/logger.js";
 
 (async () => {
   try {

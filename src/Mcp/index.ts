@@ -1,10 +1,10 @@
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { connectDB } from "../DB/mongo.ts";
+import { connectDB } from "../DB/mongo.js";
 import { registerTools } from "./tools.js";
 import { registerResources } from "./resources.js";
 import { registerPrompts } from "./prompts.js";
-import { logInfo } from "../Utils/logger.ts";
+import { logInfo } from "../Utils/logger.js";
 
 export async function initMcpServer() {
   // Conectar ao MongoDB
@@ -36,6 +36,6 @@ export async function initMcpServer() {
   await server.connect(transport);
 
   logInfo("✅ MCP Server inicializado com sucesso");
-  
+
   return server;
 }

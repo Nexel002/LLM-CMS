@@ -4,8 +4,8 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import { Db, ObjectId } from "mongodb";
-import { Post } from "../Models/post.ts";
-import { logInfo, logError } from "../Utils/logger.ts";
+import { Post } from "../Models/post.js";
+import { logInfo, logError } from "../Utils/logger.js";
 
 export function registerTools(server: Server, db: Db) {
   const postsCollection = db.collection<Post>("posts");

@@ -1,6 +1,11 @@
 import dotenv from "dotenv";
 
+// Silenciar stdout temporariamente para evitar logs do dotenv quebram o MCP
+const originalWrite = process.stdout.write;
+// @ts-ignore
+process.stdout.write = () => true;
 dotenv.config();
+process.stdout.write = originalWrite;
 
 export const config = {
   mongoUri: process.env.MONGO_URI || "",

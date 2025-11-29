@@ -1,5 +1,5 @@
 export function logInfo(...msg: any[]) {
-  console.log("\x1b[32m[INFO]\x1b[0m", ...msg);
+  console.error("\x1b[32m[INFO]\x1b[0m", ...msg);
 }
 
 export function logError(...msg: any[]) {

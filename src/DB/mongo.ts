@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
-import { config } from "../Config/env.ts";
-import { logInfo, logError } from "../Utils/logger.ts";
+import { config } from "../Config/env.js";
+import { logInfo, logError } from "../Utils/logger.js";
 
 let client: MongoClient;
 

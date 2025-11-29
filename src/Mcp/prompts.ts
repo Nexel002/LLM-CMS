@@ -4,7 +4,7 @@ import {
   ListPromptsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import { Db } from "mongodb";
-import { logInfo } from "../Utils/logger.ts";
+import { logInfo } from "../Utils/logger.js";
 
 export function registerPrompts(server: Server, db: Db) {
   // Listar prompts disponíveis

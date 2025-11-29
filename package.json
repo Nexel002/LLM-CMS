@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "tsx src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node build/server.js",
+    "clean": "rimraf build",
+    "rebuild": "npm run clean && npm run build",
     "inspect": "npx @modelcontextprotocol/inspector tsx src/server.ts"
   },
   "keywords": [],
